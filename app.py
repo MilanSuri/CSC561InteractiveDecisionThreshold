@@ -1,3 +1,15 @@
+'''
+Milan Suri
+CSC 561
+Interactive Decision Threshold
+
+This file is for creating the interactive visual that people interested in ML could use to learn about decision boundaries.
+We use the framework from log_reg.py and then implement it for getting clear insights into the distrubtion of results
+and their accuracies. Then we also plot the points and adjust the boundary to show how adjusting the threshold changes
+the number of false or true postivies/negatives.
+'''
+
+
 import streamlit as st
 import matplotlib.pyplot as plt
 import numpy as np
