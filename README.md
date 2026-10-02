@@ -3,7 +3,9 @@ ___
 
 ## Description of Activity:
 
-This is a revision activity for CSC 561 at Andover, where I have built an interactive decision threshold tool for displaying how ML models, specifically a logistic regression, change the number of true positives/negatives and false positives/negatives as you adjust the decision boundary, 
+This is a revision activity for CSC 561 at Andover, where I have built an interactive decision threshold tool for displaying how ML models, specifically a logistic regression, change the number of true positives/negatives and false positives/negatives as you adjust the decision boundary.
+
+BTW: This uses only python files no notebooks, because notebooks are worse for github, modularity, and are just messier.
 
 ## Project Structure:
 `app.py` — This file is for displaying the streamlit/web interface of the project
