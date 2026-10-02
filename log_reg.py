@@ -12,3 +12,17 @@ X = pl.DataFrame (
     schema = data.feature_names.tolist()
 )
 y = pl.Series("target", data.target)
+
+def train_log_reg(X, y):
+    X_train, X_test, y_train, y_test = train_test_split(
+        X.to_numpy(),
+        y.to_numpy(),
+        test_size = 0.25,
+        random_state = 42,
+        stratify = y, # This sets the train and test to have relatively similar proportions of classes
+    )
+
+    model = LogisticRegression(max_iter=10_000)
+    model.fit(X_train, y_train)
+
+    return model, X_test, y_test
