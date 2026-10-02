@@ -15,7 +15,7 @@ BTW: This uses only python files no notebooks, because notebooks are worse for g
 
 ### Contributing:
 1. Start by cloning the repo. In your terminal write: `git clone https://github.com/MilanSuri/CSC561InteractiveDecisionThreshold.git`
-2. Then cd to that director. In terminal write: `cd CSC561InteractiveDecisionThreshold`
+2. Then cd to that directory. In terminal write: `cd CSC561InteractiveDecisionThreshold`
 3. To ensure you're on the latest version run `git pull` in terminal.
 4. Once you have an up to date local copy, create a separate branch by running: `git checkout -b {name}`
 5. Then confirm you're not on the main branch by running `git branch`. You should see an asterisk by the current branch.
