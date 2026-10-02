@@ -1,17 +1,20 @@
 import polars as pl
-import numpy as np
-
 from sklearn.datasets import load_breast_cancer
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import confusion_matrix
 
-data = load_breast_cancer()
-X = pl.DataFrame (
-    data.data,
-    schema = data.feature_names.tolist()
-)
-y = pl.Series("target", data.target)
+def get_data():
+    data = load_breast_cancer()
+
+    X = pl.DataFrame (
+        data.data,
+        schema = data.feature_names.tolist()
+    )
+
+    y = pl.Series("target", data.target)
+
+    return X, y
 
 def train_log_reg(X, y):
     X_train, X_test, y_train, y_test = train_test_split(
