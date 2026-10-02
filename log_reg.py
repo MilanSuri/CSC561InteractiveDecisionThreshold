@@ -26,3 +26,8 @@ def train_log_reg(X, y):
     model.fit(X_train, y_train)
 
     return model, X_test, y_test
+
+def predictions(model, X_test, threshold: float):
+    probabilities = model.predict_proba(X_test)[:, 1]
+    predictions = (probabilities >= threshold).astype(int)
+    return probabilities, predictions
