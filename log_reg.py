@@ -31,3 +31,6 @@ def predictions(model, X_test, threshold: float):
     probabilities = model.predict_proba(X_test)[:, 1]
     predictions = (probabilities >= threshold).astype(int)
     return probabilities, predictions
+
+def generate_confusion_matrix (y_test, predictions):
+    return confusion_matrix(y_test, predictions)
